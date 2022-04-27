@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 /*     var commentSchema = new Schema({
@@ -9,47 +9,26 @@ const Schema = mongoose.Schema;
         }
     }) */
 
-var newsSchema = new Schema({
-    // price: Number,
+var newsSchema = new Schema(
+  {
     image: [String],
     user: {
-        type: Schema.Types.ObjectId,
-        ref: 'user'
+      type: Schema.Types.ObjectId,
+      ref: "user",
     },
     categories: {
-        type: String,
-        enum: ['business', 'politics', 'lifestyle', 'travel']
+      type: String,
+      enum: ["business", "politics", "lifestyle", "travel"],
     },
-    // numberOfRoom: Number,
-    // carParking: {
-    //     type: Boolean,
-    //     default: false
-    // },
-    // bikeParking: {
-    //     type: Boolean,
-    //     default: false
-    // },
+
     title: String,
     description: String,
-    // map: {
-    //     isMap: {
-    //         type: Boolean,
-    //         default: false
-    //     },
-    //     lat: Number,
-    //     lng: Number
-    // },
-    // comment: [{
-    //     comment: String,
-    //     user: {
-    //         type: Schema.Types.ObjectId,
-    //         ref: 'user'
-    //     }
-    // }]
-}, {
-    timestamps: true
-})
+  },
+  {
+    timestamps: true,
+  }
+);
 
-var roomModel = mongoose.model('new', newsSchema);
+var roomModel = mongoose.model("new", newsSchema);
 
 module.exports = roomModel;

@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { UserRoutingModule } from './user-routing.module';
 import { UsersComponent } from './users/users.component';
 import { NavHeaderComponent } from './layout/nav-header/nav-header.component';

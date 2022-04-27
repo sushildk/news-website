@@ -2,6 +2,7 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 
@@ -12,7 +13,11 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  fileToUpload=[];
+
+  constructor(
+    public router:Router,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -41,4 +46,8 @@ export class DashboardComponent implements OnInit {
     },
     nav: true,
   };
+
+
+
+
 }
