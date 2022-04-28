@@ -5,6 +5,7 @@ import { UserRoutingModule } from './user-routing.module';
 import { UsersComponent } from './users/users.component';
 import { NavHeaderComponent } from './layout/nav-header/nav-header.component';
 import { NavFooterComponent } from './layout/nav-footer/nav-footer.component';
+import { NewsService } from '../admin/news/service/news.service';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,5 @@ import { NavFooterComponent } from './layout/nav-footer/nav-footer.component';
     CommonModule,
     UserRoutingModule
   ],
-  providers:[]
 })
 export class UserModule { }

@@ -38,7 +38,7 @@ export class AddNewsComponent implements OnInit {
       public newsService:NewsService,
       private msgService:MsgServiceService
     ) { 
-      this.url = environment.Base_URL + '/news'
+      this.url = environment.Base_URL + 'news'
     }
   
     ngOnInit(): void {
@@ -46,7 +46,7 @@ export class AddNewsComponent implements OnInit {
     submit(){
       this.news = this.newsForm.value;
       console.log('here >>>',this.news)
-      this.newsService.addNews(this.newsForm.value)
+      this.newsService.upload(this.news,this.fileToUpload,'POST',this.url)
       .subscribe(
         (data)=>{
           this.router.navigate(['/admin'])    
@@ -67,7 +67,7 @@ export class AddNewsComponent implements OnInit {
     fileUpload(event:any){
       this.fileToUpload = event.target.files
         console.log('eventttt',event.target.files)
-      
+      console.log("file to upload",this.fileToUpload)
       }
 
 }

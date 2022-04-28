@@ -12,17 +12,18 @@ import { environment } from 'src/environments/environment';
 })
 export class NewsService {
   url:any;
-  token: string;
+  // token: string;
   constructor(
     public http:HttpClient
   ) {
     this.url=environment.Base_URL+ 'news';
-    this.token = localStorage.getItem("token")!
+    // this.token = localStorage.getItem("token")!
    }
    getOptions(){
     return{
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
+        // "token" : this.token
       })
     }
   }

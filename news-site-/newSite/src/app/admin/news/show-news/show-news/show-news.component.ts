@@ -2,8 +2,10 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
+import { allNews } from 'src/app/admin/model/newsModel.';
 
 import { MsgServiceService } from 'src/app/shared/service/msg-service.service';
+import { environment } from 'src/environments/environment';
 
 import { NewsService } from '../../service/news.service';
 
@@ -13,12 +15,14 @@ import { NewsService } from '../../service/news.service';
   styleUrls: ['./show-news.component.css']
 })
 export class ShowNewsComponent implements OnInit {
-allNews:any;
+allNews: allNews[] =[];
+imageUrl:string
   constructor(
     public newsService:NewsService,
     public msgService:MsgServiceService
   ) {
-    // this.allNews=[];
+    this.imageUrl = environment.imageUrl
+    // console.log('image',this.imageUrl)
    }
 
   ngOnInit(): void {

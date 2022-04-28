@@ -5,11 +5,21 @@ import {
 } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PoliticComponent } from './politic/politic.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
     path:'',
     component:DashboardComponent
+  },
+  {
+    path:'profile',
+    component:ProfileComponent
+  },
+  {
+    path:'politic',
+    component:PoliticComponent
   }
 ];
 
